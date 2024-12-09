@@ -1,0 +1,19 @@
+{
+    "name": "line-img-scan",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "clasp": "./node_modules/.bin/clasp"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "@google/clasp": "^2.4.2"
+    },
+    "dependencies": {
+        "clasp": "^1.0.0",
+        "punycode": "^2.3.1"
+    }
+}
