@@ -50,15 +50,15 @@ function doPost(e) {
     visionText = JSON.parse(visionText);
     // console.log(typeof(visionText));
     visionText = visionText.responses[0].fullTextAnnotation.text;
+    console.log(typeof visionText);
     // console.log(typeof(visionText));
-    visionText = JSON.stringify(visionText);
 
-    // console.log(typeof(visionText));
+    visionText = visionText.replace(/"/g, "");
     console.log("visionText:" + visionText);
 
     let reply = {
         replyToken: replyToken,
-        messages: [{ type: "text", text: visionText.replace(/'/g, '"') }],
+        messages: [{ type: "text", text: visionText }],
     };
     reply = JSON.stringify(reply);
 
